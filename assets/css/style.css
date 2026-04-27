@@ -196,7 +196,7 @@ header ul li:hover {
     display: flex;
     flex-direction: column; /* Para que el título quede arriba de la cuadrícula */
     align-items: center;    /* Centra el título y la cuadrícula */
-    background-color: #8d0013;
+    background-color: #7e0101;
     border-radius: 40px;
     padding: 60px 20px;
     font-family: "Stack Sans Headline", sans-serif;  
