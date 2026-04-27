@@ -305,24 +305,85 @@ h1, h2, h3 {
 } */
 
 
+/* MEDIA QUERY FOR MOBILES */
 @media (max-width: 768px) {
 
-    body {
-        font-size: 14px;
+    header {
+        flex-direction: column; 
+        padding: 20px;
+        gap: 15px;
     }
 
-    main {
-        width: 95%;
+    nav {
+        margin-left: 0; 
     }
 
-    section {
-        margin: 2rem 0;
+    nav .nav_list {
+        gap: 1.5rem; 
+        margin: 0;
     }
 
-    /* Hint clave */
-    /* piensa en:
-       - menús colapsables
-       - layouts en columna
-       - imágenes adaptativas
-    */
+    nav .nav_list a {
+        font-size: 16px; 
+    }
+    
+    .bio {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .about img {
+        width: 100%; 
+        margin-bottom: 20px;
+    }
+
+    
+    .multimedia .img_grid {
+        grid-template-columns: repeat(1, 1fr); 
+        grid-auto-rows: 300px;
+    }
+
+    
+    .events div {
+        overflow-x: auto;
+        padding: 10px;
+    }
+    
+    .events__table {
+        font-size: 0.8rem; 
+    }
+
+    
+    .hero__overlay h2 {
+        font-size: 1.8rem;
+        width: 90%;
+    }
+}
+
+/* MEDIA QUERY DESKTOP */
+
+@media (min-width: 1024px) {
+    
+    .about, .events, .multimedia {
+        padding: 80px 10%; 
+    }
+
+    .bio {
+        gap: 60px;
+    }
+
+
+    .multimedia .img_grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-auto-rows: 350px; 
+    }
+
+    .hero__overlay h2 {
+        font-size: 4rem;
+    }
+
+    .footer_content {
+        max-width: 1200px;
+    }
 }
