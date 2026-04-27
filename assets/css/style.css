@@ -191,13 +191,15 @@ header ul li:hover {
 }
 
 /* ----------------------------------- MEDIA ------------------------------------------- */
+
 .multimedia {
     display: flex;
     flex-direction: column; /* Para que el título quede arriba de la cuadrícula */
     align-items: center;    /* Centra el título y la cuadrícula */
     background-color: #8d0013;
     border-radius: 40px;
-    padding: 60px 20px;     /* Espacio interno para que no pegue a los bordes */
+    padding: 60px 20px;
+    font-family: "Stack Sans Headline", sans-serif;  
 }
 
 .multimedia h2 {
@@ -228,12 +230,49 @@ header ul li:hover {
     transform: scale(1.2);
 }
 /* ---------------------------------- FOOTER ------------------------------------------ */
+
 footer {
+    background-color: #1a1a1a; /* Un tono casi negro para contrastar con el rojo */
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+    font-family: "Stack Sans Headline", sans-serif;
+}
+
+.footer_content {
+    max-width: 1000px;
+    margin: 0 auto;
     display: flex;
-    background-color: #8d0013;
-    justify-content: space-between;
+    justify-content: space-between; /* Mueve el texto a la izquierda y redes a la derecha */
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Línea sutil decorativa */
+    padding-top: 20px;
+}
+
+.footer_content p {
+    font-size: 1.9rem;
 
 }
+
+.social {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Espacio entre links */
+    padding: 0;
+    margin: 0;
+}
+
+.social a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+}
+
+.social a:hover {
+    color: #8d0013; /* Cambia al rojo de la banda al pasar el mouse */
+}
+
+/* ------------------------------------------------------------------------------------ */
 
 img {
     max-width: 100%;
