@@ -1,0 +1,289 @@
+/* --- FONTS --- */
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=IM+Fell+DW+Pica:ital@0;1&family=Stack+Sans+Headline:wght@200..700&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0b0b0f;
+    color: #f5f5f5;
+    line-height: 1.5;
+}
+
+/* --- HEADER --- */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+    background: linear-gradient(90deg,rgba(27, 35, 36, 1) 0%, rgba(140, 18, 18, 1) 50%, rgba(204, 156, 12, 1) 100%);
+    align-items: center;
+    font-family: "Stack Sans Headline", sans-serif;
+}
+
+header h1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header img {
+    width: 100px;
+    height: 100px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+    
+}
+
+nav .nav_list {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+    margin: 30px;
+    padding: 10px;
+    gap: 3rem;
+    font-size: 20px; 
+}
+
+header ul li:hover {
+    color: rgb(64, 22, 9);
+    transform: scale(1.2);
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+/* ----------------------------------- HERO ------------------------------------------- */
+
+.hero {
+    position: relative;
+    height: 70vh; 
+    overflow: hidden;
+    border-radius: 40px;
+}
+
+.hero__overlay {
+    width: 100%;
+    height: 100%;
+}
+
+.hero__overlay img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Evita que la imagen se deforme */
+    display: block;
+}
+
+.hero__overlay h2 {
+    position: absolute; 
+    top: 50%;           
+    left: 50%;          
+    transform: translate(-50%, -50%); 
+    
+    color: white;
+    font-size: 5rem;
+    font-style: italic;    
+    text-align: center;
+    z-index: 10;        
+    text-shadow: 2px 2px 10px rgba(0,0,0,0.5); 
+}
+
+/* ----------------------------------- ABOUT ------------------------------------------- */
+
+.about {
+    padding: 40px;
+    background-color: #4935f727;
+    border-radius: 50px;
+    font-family: "Stack Sans Headline", sans-serif;
+}
+
+.about h3 {
+    color: #8d0013;
+}
+
+.bio {
+    display: flex;       /* Alinea imagen y bio_info en fila */
+    align-items: start;  /* Alinea los elementos al principio (arriba) */
+    gap: 60px;           /* Espacio entre la imagen y el texto */
+}
+
+.about img {
+    width: 40%;          /* Reducido un poco para que el texto tenga aire */
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;  
+    justify-content: center;
+}
+
+.about .bio_info {
+    display: block;      
+    flex: 1;            
+}
+
+
+.bio_info ul {
+    list-style-position: inside;
+    padding-left: 0;
+}
+
+/* ----------------------------------- EVENTS ------------------------------------------ */
+
+.events {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 20px; /* Más espacio arriba y abajo */
+    background-color: #8d0013;
+    border-radius: 40px;
+    color: white;
+    font-family: "Stack Sans Headline", sans-serif;
+}
+
+.events div {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.events__table {
+    width: 100%;            /* Ocupa casi todo el ancho disponible */
+    max-width: 800px;      /* Pero no se estira infinito */
+    border-collapse: collapse; /* Quita los espacios dobles entre bordes */
+    font-family: sans-serif;
+    overflow: hidden;     
+    font-family: "Stack Sans Headline", sans-serif;
+}
+
+.events__table th {
+    background-color: rgba(0, 0, 0, 0.3); /* Fondo oscuro sutil */
+    padding: 15px;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    border-bottom: 2px solid white;
+}
+
+.events__table td {
+    padding: 20px;         
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.events__table button {
+    background-color: white;
+    color: #8d0013;
+    border: none;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.events__table button:hover {
+    background-color: #ffcccc; 
+    transform: scale(1.05);   
+}
+
+/* ----------------------------------- MEDIA ------------------------------------------- */
+.multimedia {
+    display: flex;
+    flex-direction: column; /* Para que el título quede arriba de la cuadrícula */
+    align-items: center;    /* Centra el título y la cuadrícula */
+    background-color: #8d0013;
+    border-radius: 40px;
+    padding: 60px 20px;     /* Espacio interno para que no pegue a los bordes */
+}
+
+.multimedia h2 {
+    color: white;
+    margin-bottom: 30px;
+}
+
+.multimedia .img_grid {
+    display: grid;
+    /* Crea 3 columnas de igual tamaño */
+    grid-template-columns: repeat(3, 1fr); 
+    /* Crea las filas necesarias (3 en este caso) con una altura fija */
+    grid-auto-rows: 250px; 
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px; /* Limita el ancho máximo para que no se estiren demasiado */
+}
+
+.multimedia .img_grid img {
+    width: 100%;        /* Ocupa todo el ancho de su celda */
+    height: 100%;       /* Ocupa todo el alto de su celda */
+    object-fit: cover;  /* CORTA la imagen para que llene el espacio sin deformarse */
+    border-radius: 9px; /* Opcional: bordes redondeados para cada foto */
+    transition: transform 0.3s ease; /* Efecto visual opcional */
+}
+
+.multimedia .img_grid img:hover {
+    transform: scale(1.2);
+}
+/* ---------------------------------- FOOTER ------------------------------------------ */
+footer {
+    display: flex;
+    background-color: #8d0013;
+    justify-content: space-between;
+
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+main {
+    
+    max-width: 1000px;
+    margin: auto;
+}
+
+section {
+    margin: 1rem 0;
+}
+
+h1, h2, h3 {
+    margin-bottom: 9px;
+}
+
+
+/* Puedes usar esto si quieres centrar contenido */
+/* .container {
+    margin: 0 auto;
+} */
+
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 14px;
+    }
+
+    main {
+        width: 95%;
+    }
+
+    section {
+        margin: 2rem 0;
+    }
+
+    /* Hint clave */
+    /* piensa en:
+       - menús colapsables
+       - layouts en columna
+       - imágenes adaptativas
+    */
+}
